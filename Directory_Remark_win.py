@@ -2,3 +2,6 @@
 # @Time     :2022/6/28 1:51
 # @Author   :yq-Liang
 # Good Luck !
+
+if __name__=="__main__":
+    pass
