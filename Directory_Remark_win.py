@@ -4,4 +4,4 @@
 # Good Luck !
 
 if __name__=="__main__":
-    pass
+    print("it's ok.")
