@@ -5,7 +5,6 @@
 
 # from https://blog.csdn.net/weixin_44003188/article/details/123188847
 
-__author__ = 'Piratf'
 
 import sys
 import os
