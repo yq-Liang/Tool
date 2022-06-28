@@ -45,13 +45,12 @@ def addCommentToFolder(fpath, comment):
     runCommand('attrib ' + settingFilePath + ' +s +h')
     runCommand('attrib ' + fpath + ' +s ')
 
-    print(sysEncode(u"备注添加成功~"))
-    print(sysEncode(u"备注可能过一会才会显示，不要着急"))
+    print(sysEncode(u"备注成功~"))
 
 
 def addComment(fpath=None, comment=None):
-    inputPathMsg = sysEncode(u"请输入文件夹路径(或拖动文件夹到这里): ")
-    inputCommentMsg = sysEncode(u"请输入文件夹备注:")
+    inputPathMsg = sysEncode(u"输入文件夹路径(或拖动文件夹到这里): ")
+    inputCommentMsg = sysEncode(u"输入文件夹备注:")
 
     # 输入文件夹路径
     if (fpath == None):
@@ -64,7 +63,7 @@ def addComment(fpath=None, comment=None):
     # 判断路径是否存在文件夹
     while not os.path.isdir(fpath):
         print(fpath)
-        re_enterMessage(u"你输入的不是一个文件夹路径")
+        re_enterMessage(u"输入不存在")
         fpath = input(inputPathMsg)
 
     settingFilePath = getSettingFilePath(fpath)
@@ -79,7 +78,7 @@ def addComment(fpath=None, comment=None):
         comment = input(inputCommentMsg)
 
     while not comment:
-        re_enterMessage(u"备注不要为空哦")
+        re_enterMessage(u"备注不要为空")
         comment = input(inputCommentMsg)
 
     addCommentToFolder(fpath, comment)
